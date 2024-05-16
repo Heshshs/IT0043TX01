@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Lobster&family=Poetsen+One&display=swap');
+body{
+    background-image: url(https://cdn.vectorstock.com/i/500p/03/32/abstract-green-and-yellow-background-vector-46740332.jpg);
+    background-size: cover;
+}
+body{
+    text-align: center;
+    font-family: "Poetsen One";
+}
+h1
+{
+    font-size: 90px;
+}
+h2{
+    font-size: 60px;
+}
+p1
+{
+    font-size: 30px;
+}
+p2{
+    font-size: 30px;
+}
+p3
+{
+    font-size: 70px;
+    color: yellow;
+}
+p4
+{
+    background-color: yellow;
+    
+    color: green;
+    font-size: 30px;
+    font-style: italic;
+}
+p5
+{
+    background-color: green;
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+}
+span{
+        display: inline-block;
+        width: 100%;
+        text-align:right;
+    
+}
