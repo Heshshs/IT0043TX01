@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12&family=Press+Start+2P&family=VT323&display=swap');
+body{
+    background-image: url(https://st2.depositphotos.com/7507618/12045/v/450/depositphotos_120454410-stock-illustration-pokeball-seamless-pattern.jpg);
+    background-size: cover;
+    text-align: center;
+    font-family: "VT323";
+    
+    }
+    
+    .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    }
+    
+    .card{
+    background-image: url(https://w0.peakpx.com/wallpaper/234/392/HD-wallpaper-pokemon-pokeball-pokemon-thumbnail.jpg);
+    background-size: cover;
+    background-position: top;
+    width: 300px;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .details{
+    padding: 20px;
+    }
+    .name{
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-shadow: 5px 5px 5px black;
+    
+    }
+    .type{
+    margin-bottom: 5px;
+    color: aliceblue;
+    text-decoration: solid;
+    font-size: 20px
+    }
+    desc{
+        margin-bottom: 5px;
+    }
+    .buttons{
+    display: flex;
+    justify-content: space-between;
+    }
+    .buttons button{
+    padding:8px 8px;
+    border-radius: 4px;
+    border: 2px solid black;
+    }
+    .add{
+    background-color:aqua;
+    }
+    .release{
+    background-color: crimson;
+    }
+    .name{
+    color: white;
+
+    }
+    .grass{
+    background-color: greenyellow;
+    border: 5px solid black;
+    border-radius: 5px;
+    }
+    .poison{
+    background-color: rgb(189, 47, 255);
+    border: 5px solid black;
+    border-radius: 5px;
+    }
+    .Fire{
+    background-color: rgb(247, 49, 0);
+    border: 5px solid black;
+    border-radius: 5px;
+    }
+    .flying{
+    background-color: rgb(241, 241, 240);
+    border: 5px solid black;
+    border-radius: 5px;
+    }
+    .water{
+    background-color: rgb(31, 158, 243);
+    border: 5px solid black;
+    border-radius: 5px;
+    }
+    .normal{
+    background-color: rgb(112, 112, 112);
+    border: 5px solid black;
+    border-radius: 5px;
+    }
+    .darkgreen{
+        height: 260px;
+        border-top: 5px solid black;
+        background-color: hsl(128, 100%, 20%);
+    }
+    .red{
+        height: 260px;
+        border-top: 5px solid black;
+        background-color: hsl(17, 100%, 50%);
+    }
+    .blue{
+        height: 260px;
+        border-top: 5px solid black;
+        background-color: hsl(189, 100%, 51%);
+    }
+    .grey{
+        height: 260px;
+        border-top: 5px solid black;
+        background-color: hsl(180, 1%, 38%);
+    }
+    img{
+        filter: drop-shadow(10px 10px 5px black);
+    }
+    .desc{
+        color: white;
+    }
