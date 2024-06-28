@@ -3,45 +3,45 @@ function resetFlexbox() {
     document.querySelector('.flex-container').style.flexDirection = 'row';
     document.querySelector('.flex-container').style.justifyContent = 'flex-start';
     document.querySelector('.flex-container').style.alignItems = 'flex-start';
-    document.getElementById('gap').value = 0;
+    document.getElementById('gp').value = 0;
     resetFlexGrow();
-    }
-    
-    function updateFlexbox() {
-    let gap = document.getElementById('gap').value;
+}
+
+function updateFlexbox() {
+    let gap = document.getElementById('gp').value;
     document.querySelector('.flex-container').style.gap = gap + 'px';
-    }
-    
-    function setFlexDirection(direction) {
+}
+
+function setFlexDirection(direction) {
     document.querySelector('.flex-container').style.flexDirection = direction;
-    }
-    
-    function setJustifyContent(justify) {
+}
+
+function setJustifyContent(justify) {
     document.querySelector('.flex-container').style.justifyContent = justify;
-    }
-    
-    function setAlignItems(align) {
+}
+
+function setAlignItems(align) {
     document.querySelector('.flex-container').style.alignItems = align;
-    }
-    
-    function resetFlexGrow() {
+}
+
+function resetFlexGrow() {
     let items = document.querySelectorAll('.flex-item');
     items.forEach(item => {
-    item.style.flexGrow = 0;
+        item.style.flexGrow = 0;
     });
     document.getElementById('box1').value = 0;
     document.getElementById('box2').value = 0;
     document.getElementById('box3').value = 0;
-    }
-    
-    function setFlexGrowAll() {
+}
+
+function setFlexGrowAll() {
     let items = document.querySelectorAll('.flex-item');
     items.forEach(item => {
-    item.style.flexGrow = 1;
+        item.style.flexGrow = 1;
     });
-    }
-    
-    function updateFlexGrow(boxNumber) {
+}
+
+function updateFlexGrow(boxNumber) {
     let growValue = document.getElementById(`box${boxNumber}`).value;
     document.getElementById(`item${boxNumber}`).style.flexGrow = growValue;
-    }
+}
