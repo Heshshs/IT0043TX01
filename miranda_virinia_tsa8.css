@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -6,7 +6,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.box{
+.box {
     width: 100px;
     height: 100px;
     border: 1px solid black;
@@ -18,50 +18,51 @@
     font-weight: 700;
 }
 
-#box1{
+#item1 {
     background-color: rgb(221, 29, 228);
 }
-#box2{
+#item2 {
     background-color: green;
 }
-#box3{
+#item3 {
     background-color: black;
 }
 
-.container{
+.container {
     display: flex;
-    width: 90vw;
+    width: 95vw; /* Increase width to allow more space for boxes */
+    height: 70vh; /* Increase height to allow more space for boxes */
     border: 1px solid black;
     margin: 10px auto;
-    padding: 10px;
+    padding: 20px; /* Increase padding to allow more space inside the container */
     flex-direction: column;
     justify-content: space-evenly;
 }
-.container2{
+
+.container2 {
     display: grid;
     gap: 5px;
     grid-template-columns: repeat(5, 1fr);
     width: 95vw;
     margin: 30px;
     padding: 30px;
-    
-    
 }
-.start, .flex-direction, .justify-content, .align-items, .flex-grow{
-    display: flex;  
+
+.start, .flex-direction, .justify-content, .align-items, .flex-grow {
+    display: flex;
     flex-direction: column;
     border: 1px solid black;
     align-items: center;
     padding: 20px;
 }
-.boxes{
-    display: flex;  
+
+.boxes {
+    display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
-button{
+button {
     background-color: skyblue;
     justify-content: center;
     font-size: 1rem;
@@ -70,10 +71,7 @@ button{
     width: 200px;
     align-items: center;
 }
-#gp, bx{
-    background-color: grey;
-}
-input{
+
+input {
     border: 1px solid black;
-    
 }
