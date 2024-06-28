@@ -1,47 +1,45 @@
-function resetFlexbox() {
-    document.querySelector('.flex-container').style.gap = '0px';
-    document.querySelector('.flex-container').style.flexDirection = 'row';
-    document.querySelector('.flex-container').style.justifyContent = 'flex-start';
-    document.querySelector('.flex-container').style.alignItems = 'flex-start';
-    document.getElementById('gp').value = 0;
-    resetFlexGrow();
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const flexContainer = document.querySelector('.flex-container');
+    const gapInput = document.getElementById('gp');
+    const boxInputs = [1, 2, 3].map(i => document.getElementById(`box${i}`));
 
-function updateFlexbox() {
-    let gap = document.getElementById('gp').value;
-    document.querySelector('.flex-container').style.gap = gap + 'px';
-}
+    const setStyle = (property, value) => flexContainer.style[property] = value;
+    const resetFlexbox = () => {
+        setStyle('gap', '0px');
+        setStyle('flexDirection', 'row');
+        setStyle('justifyContent', 'flex-start');
+        setStyle('alignItems', 'flex-start');
+        gapInput.value = 0;
+        resetFlexGrow();
+    };
 
-function setFlexDirection(direction) {
-    document.querySelector('.flex-container').style.flexDirection = direction;
-}
+    const updateFlexbox = () => setStyle('gap', `${gapInput.value}px`);
+    const setFlexDirection = direction => setStyle('flexDirection', direction);
+    const setJustifyContent = justify => setStyle('justifyContent', justify);
+    const setAlignItems = align => setStyle('alignItems', align);
 
-function setJustifyContent(justify) {
-    document.querySelector('.flex-container').style.justifyContent = justify;
-}
+    const resetFlexGrow = () => {
+        document.querySelectorAll('.flex-item').forEach(item => item.style.flexGrow = 0);
+        boxInputs.forEach(input => input.value = 0);
+    };
 
-function setAlignItems(align) {
-    document.querySelector('.flex-container').style.alignItems = align;
-}
+    const setFlexGrowAll = () => {
+        document.querySelectorAll('.flex-item').forEach(item => item.style.flexGrow = 1);
+    };
 
-function resetFlexGrow() {
-    let items = document.querySelectorAll('.flex-item');
-    items.forEach(item => {
-        item.style.flexGrow = 0;
-    });
-    document.getElementById('box1').value = 0;
-    document.getElementById('box2').value = 0;
-    document.getElementById('box3').value = 0;
-}
+    const updateFlexGrow = (boxNumber) => {
+        document.getElementById(`item${boxNumber}`).style.flexGrow = document.getElementById(`box${boxNumber}`).value;
+    };
 
-function setFlexGrowAll() {
-    let items = document.querySelectorAll('.flex-item');
-    items.forEach(item => {
-        item.style.flexGrow = 1;
-    });
-}
+    gapInput.addEventListener('input', updateFlexbox);
+    boxInputs.forEach((input, i) => input.addEventListener('input', () => updateFlexGrow(i + 1)));
 
-function updateFlexGrow(boxNumber) {
-    let growValue = document.getElementById(`box${boxNumber}`).value;
-    document.getElementById(`item${boxNumber}`).style.flexGrow = growValue;
-}
+    document.getElementById('reset-flexbox').addEventListener('click', resetFlexbox);
+    document.getElementById('grow-all').addEventListener('click', setFlexGrowAll);
+
+    ['row', 'column'].forEach(dir => document.getElementById(dir).addEventListener('click', () => setFlexDirection(dir)));
+    ['start', 'center', 'end', 'space-between', 'space-around', 'space-evenly']
+        .forEach(justify => document.getElementById(justify).addEventListener('click', () => setJustifyContent(justify)));
+    ['startj', 'centerj', 'endj']
+        .forEach(align => document.getElementById(align).addEventListener('click', () => setAlignItems(align.replace('j', ''))));
+});
