@@ -3,60 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flexbox Playground</title>
     <link rel="stylesheet" href="miranda_virinia_tsa8.css">
 </head>
 <body>
-    <div class="container">
-        <div class="box" id="box1">1</div>
-        <div class="box" id="box2">2</div>
-        <div class="box" id="box3">3</div>
+    <div class="container flex-container">
+        <div class="box flex-item" id="item1">1</div>
+        <div class="box flex-item" id="item2">2</div>
+        <div class="box flex-item" id="item3">3</div>
     </div>
 
     <div class="container2">
         <div class="start">
-            <button id="reset-flexbox" onclick="resetflexbox">Reset Flexbox</button>
-            <button id="gap">Gap</button>
+            <button id="reset-flexbox" onclick="resetFlexbox()">Reset Flexbox</button>
+            <button id="gap-button" onclick="updateFlexbox()">Gap</button>
             <input type="number" min="0" id="gp">
         </div>
 
         <div class="flex-direction">
             <h2>Flex Direction</h2>
-            <button id="row">Row</button>
-            <button id="Column">Column</button>
+            <button id="row" onclick="setFlexDirection('row')">Row</button>
+            <button id="column" onclick="setFlexDirection('column')">Column</button>
         </div>
 
         <div class="justify-content">
             <h2>Justify Content</h2>
-            <button id="start">Start</button>
-            <button id="center">Center</button>
-            <button id="end">end</button>
-            <button id="space-between">Space Between</button>
-            <button id="space-around">Space Around</button>
-            <button id="space-evenly">Space-Evenly</button>
+            <button id="start" onclick="setJustifyContent('flex-start')">Start</button>
+            <button id="center" onclick="setJustifyContent('center')">Center</button>
+            <button id="end" onclick="setJustifyContent('flex-end')">End</button>
+            <button id="space-between" onclick="setJustifyContent('space-between')">Space Between</button>
+            <button id="space-around" onclick="setJustifyContent('space-around')">Space Around</button>
+            <button id="space-evenly" onclick="setJustifyContent('space-evenly')">Space-Evenly</button>
         </div>
 
         <div class="align-items">
-            <h2>Align Item</h2>
-            <button id="startj">Start</button>
-            <button id="centerj">Center</button>
-            <button id="endj">end</button>
+            <h2>Align Items</h2>
+            <button id="startj" onclick="setAlignItems('flex-start')">Start</button>
+            <button id="centerj" onclick="setAlignItems('center')">Center</button>
+            <button id="endj" onclick="setAlignItems('flex-end')">End</button>
         </div>
 
         <div class="flex-grow">
             <h2>Flex Grow</h2>
-            <button id="reset">Reset</button>
-            <button id="grow-all">Grow All</button>
+            <button id="reset" onclick="resetFlexGrow()">Reset</button>
+            <button id="grow-all" onclick="setFlexGrowAll()">Grow All</button>
             <div class="boxes">
-                <button id="boxes1">Box 1</button>
-                <input type="number" min="0" class="bx"><br>
-                <button id="boxes2">Box 2</button>
-                <input type="number" min="0" class="bx"><br>
-                <button id="boxes3">Box 3</button>
-                <input type="number" min="0" class="bx">
+                <button id="boxes1" onclick="updateFlexGrow(1)">Box 1</button>
+                <input type="number" min="0" id="box1" class="bx"><br>
+                <button id="boxes2" onclick="updateFlexGrow(2)">Box 2</button>
+                <input type="number" min="0" id="box2" class="bx"><br>
+                <button id="boxes3" onclick="updateFlexGrow(3)">Box 3</button>
+                <input type="number" min="0" id="box3" class="bx">
             </div>
         </div>
-
     </div>
     <script src="miranda_virinia_tsa8.js"></script>
 </body>
