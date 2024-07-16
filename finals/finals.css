@@ -5,6 +5,7 @@
     box-sizing: border-box;
     font-family: "Fredoka";
     transition: 0.5s all ease;
+    scroll-behavior: smooth;
 }
 
 body {
